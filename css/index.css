@@ -1,0 +1,132 @@
+@media screen and (min-width: 320px) and (max-width: 768px)
+{
+    .titulo
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+    }
+    .ingresa
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    .juego
+    {
+        display: flex;
+        justify-content: center;
+        background-color: #091e79;
+        text-align: center;
+        color: aliceblue;
+    }
+    .cara
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    .juegoselect
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    .caraosello
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    .botonjug
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;   
+    }
+    .imagenmoneda
+    {
+        width: 200px;
+        height: 150px;
+    }
+    .imagen
+    {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+@media screen and (min-width: 769px) and (max-width: 1300px)
+{
+    .titulo
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+    }
+    .ingresa
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    .juego
+    {
+        display: flex;
+        justify-content: center;
+        background-color: #091e79;
+        text-align: center;
+        color: aliceblue;
+    }
+    .cara
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    .juegoselect
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    .caraosello
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    .botonjug
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;   
+    }
+    .imagenmoneda
+    {
+        width: 200px;
+        height: 150px;
+    }
+    .imagen
+    {
+        display: flex;
+        justify-content: center;
+    }
+}
+*
+{
+    font-family: 'Lora', serif;
+    font-family: 'Overpass', sans-serif;
+    padding: 0%;
+    margin: 0%;
+}
+.imagenmoneda
+    {
+        width: 200px;
+        height: 150px;
+    }
+    .imagen
+    {
+        display: flex;
+        justify-content: center;
+    }

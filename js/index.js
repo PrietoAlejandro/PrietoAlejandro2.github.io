@@ -70,7 +70,7 @@ tirar.addEventListener("click", () =>
 
 reiniciar.addEventListener("click",() => 
 {
-    opcion=confirm("Desea seguir jugando?")
+    opcion=confirm("Desea salir del juego?")
     alert(`Usted ha jugado `+contador+ " partidas y su dinero acumulado es: "+acumulado)
     
     .then((result) => 

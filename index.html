@@ -23,9 +23,17 @@
      <div class="cara">
         <h3>Seleccione si cara o sello</h3>
      </div>
-     <div class="imagen">
-        <img class="imagenmoneda" src="img/moneda.jpg" alt="">
-     </div>
+
+     <div class="coin" id="coin">
+         <div class="heads">
+            <img src="img/cara.jpg">
+         </div>
+   
+         <div class="tails">
+            <img src="img/sello.jpg">
+         </div>
+   </div>
+
      <div class="caraosello">
         <select name="" id="caraosello">
             <option value="1">Cara</option>
@@ -35,6 +43,11 @@
      <div class="botonjug">
         <button type="button" class="btn btn-primary btn-lg" id="boton">Tirar moneda</button>
      </div>
+     <div class="botonreiniciar">
+      <button id="reinicio">
+          <a href="index.html">Terminar Partida</a>
+      </button>
+  </div>
 </body>
 <script src="js/index.js"></script>
 </html>

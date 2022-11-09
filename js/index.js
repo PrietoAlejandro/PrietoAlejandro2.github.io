@@ -1,48 +1,81 @@
-const sele=document.getElementById('boton');
-sele.addEventListener('click', ()=>
+let coin = document.querySelector(".coin");
+let tirar = document.querySelector("#boton");
+let apuesta = document.querySelector("#apuestav");
+let opcion = document.querySelector("#caraosello");
+let reiniciar = document.querySelector("#reinicio");
+let acumulado=0;
+let contador=0;
+
+tirar.addEventListener("click", () => 
 {
-    random=Math.floor(Math.random() *2) +1;
-    let selec =document.getElementById('caraosello').value
-    let apuesta =document.getElementById('apuestav').value
+    let i = Math.floor(Math.random() * 2);
+    coin.style.animation = "none";
 
-    let acumulado = 0;
-    let opcion;
-    let contador = 0; 
+    let opcionusu=parseInt(opcion.value)
+    let apuestausu=parseInt(apuesta.value)
+    contador = contador+1;
 
-    opcion=confirm("¿Desea empezar a jugar?")
+    if(i)
+    {   
+        setTimeout(function()
+        {
+            if(i===opcionusu)
+            {
+                acumulado=(parseInt(acumulado+(apuestausu*2)));
+                alert("Usted ha ganado, ha caido cara, su acumulado es "+acumulado)
 
-    alert(`La moneda esta girado, espere un momento`)
-    
-    while(opcion == true)
-{
-        random=Math.floor(Math.random() *2) +1;
-    if(selec==1 && random==1)
-    {
-        alert(`Esto es Cara`)
-        alert(`Es correcto, usted gano`)
-        acumulado=acumulado+(apuesta*2)
-        alert(`Usted ha ganado, lleva acumulado: `+acumulado)
-    }
-    else if(selec==2 && random==2)
-    {
-        alert(`Esto es Sello`)
-        alert(`Es correcto, usted gano`)
-        acumulado=acumulado+(apuesta*2)
-        alert(`Usted ha ganado, lleva acumulado: `+acumulado)
+                opcion=confirm("Desea seguir jugando?")
+                
+            }else
+            {
+                acumulado=(parseInt(acumulado-(apuestausu*2)));
+                alert("Usted ha perdido, ha caido cara, su acumulado es "+acumulado)
+
+                opcion=confirm("Desea seguir jugando?")
+                
+            }
+        }, 3000);
+       
     }
     else
     {
-        alert(`La moneda es diferente a su seleccion`)
-        alert(`Usted ha perdido`)
-        acumulado=acumulado-(apuesta)
-        alert(`Usted ha perdido, acumulo: `+acumulado)
+        coin.style.animation = "spin-tails 3s forwards";
+        setTimeout(function()
+        {
+            if(i==opcionusu)
+            {
+                acumulado=(parseInt(acumulado+(apuestausu*2)));
+                alert("Usted ha ganado, ha caido sello, su acumulado es "+acumulado)
+
+                opcion=confirm("Desea seguir jugando?")
+            }else
+            {
+                acumulado=(parseInt(acumulado-(apuestausu*2)));
+                alert("Usted ha perdido, ha caido sello, su acumulado es "+acumulado)
+
+                opcion=confirm("Desea seguir jugando?")
+            }
+        }, 3000);
+        
     }
+    setTimeout(updateStats, 3000);
+    disableButton();
+
     
-    contador = contador+1;
 
     opcion=confirm("Desea seguir jugando?")
-}
-    
-        alert(`Usted ha jugado `+contador+ " partidas y su dinero acumulado es: "+acumulado)
+    alert(`Usted ha jugado `+contador+ " partidas y su dinero acumulado es: "+acumulado)
+});
 
-})
+
+reiniciar.addEventListener("click",() => 
+{
+    opcion=confirm("Desea seguir jugando?")
+    alert(`Usted ha jugado `+contador+ " partidas y su dinero acumulado es: "+acumulado)
+    
+    .then((result) => 
+    {    
+            window.location.href = "./index.html";   
+    })
+});
+
